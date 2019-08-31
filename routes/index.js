@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
  /* GET settings page */
  router.get('/settings', function(req, res, next) {
-  res.render('settings');
+  res.render('settings', { title: 'Settings' });
  });
 
  /* GET React App */
