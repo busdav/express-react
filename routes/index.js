@@ -8,8 +8,13 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+ /* GET settings page */
+ router.get('/settings', function(req, res, next) {
+  res.render('settings');
+ });
+
  /* GET React App */
- router.get('/app', function(req, res, next) {
+ router.get(['/app', '/app/*'], function(req, res, next) {
   res.sendFile(path.join(__dirname, '../public', 'app.html'));
  });
 
